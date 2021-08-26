@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.local-container{
+  margin: 0;
+  background-color: #F1F1F3;
+  width: 100vw !important;
+  min-height:100vh;
+  font-size: 1.125em;
+	line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  padding-inline: 7.5%;
+}
+
+.side-menu{
   display: flex;
   flex-direction: column;
+  align-self:flex-end;
+  height: 90%;
+  min-height: 650px;
+  width: 15%;
+  padding-block-start: 70px;
+  box-sizing: border-box;
+  min-width: 210px;
+ align-items: center;
+ 
+ 
+}
+
+.content{
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-self:flex-end;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #fff;
+  height: 90%;
+  min-height: 650px;
+  width: 70%;
+  margin-inline: 3%;
+  flex-grow: 1;
+  margin-top: 32px ;
+  min-width: 446px;
+  padding: 40px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.menu{
+  list-style: none;
+  padding: 0px;
+  width: 200px;
+  margin-top: 60px;
+}
+
+.menu li{
+  color: #ADB4BF;
+  padding-left: 23%;
+  margin-bottom: 25px;
+  padding-block: 10px;
+  font-weight: 600 !important;
+  border-radius: 0.9em;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.menuBtn{
+  color: white !important;
+    margin-bottom: 8px;
+    padding-block: 7px;
+    border-radius: 0.9em;
+    background-color: #FFBC38;
+    box-shadow: 0px 2px 7px 1px rgba(65, 65, 65, 0.171);
+  }
+
+  .navi{
+    margin-right: 30px !important;
+    width: 30px;
+    height: 30px;
+    border-radius: 2em;
+    background-color:#E8E9ED;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:#142A4A !important; 
+  }
+
+  .navi i{
+    font-size:large;
+  }
+  
+
+  .navi::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 19px;
+    width: 11px;
+    height: 11px;
+    background-color: #FFBC38;
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+
+  
+
+  .Dropdown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+
+  }
+  .dropdown-menu{
+    background-color: #f4f4f6;
+    border: 1px solid #f4f4f6;
+    border-radius: 20px;
+    width: 195px;
+    margin-top: 8px !important;
+    padding-block: 10px;
+    box-shadow: 0 3px 3px rgba(177, 177, 177, 0.349);
+
+  }
+
+  .dropdown-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size:.98em;
+    font-weight: 500;
+    color: #142A4A;
+  }
+
+  .dropdown-item:hover{
+    background-color:#e8e9ed50;
+  }
+
+  .dropdown-item i{
+    background-color: white;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    font-weight: 400 !important;
+  }
+
+
+  .Dropdown button{
+   color: #142A4A !important;
+   font-weight: 600 !important;
+  }
+  
+  .profile-pic{
+    height: 45px;
+    width: 45px;
+    border: .1em solid #142A4A ;
+  }
+  
+  .dropdown-toggle::after {
+    display: inline-block;
+    width: .63em;
+    height: .63em;
+    margin: -.5em 0 0 .4em;
+    vertical-align: middle;
+    content: "";
+    border: .3em solid #ADB4BF;
+    border-width: 0 .23em .23em 0em;
+    transform: rotateZ(45deg)
+  }
+
+  
+  .btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+.usertxt{
+  font-weight: 500;
+  font-size:small;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  text-decoration: none;
 }
+
+.menu li:hover,.activated{
+background-color: #E8E9ED;
+color: #142A4A;
+cursor: pointer;
+}
+
+.activated{
+  background-color: #E8E9ED;
+  color: #142A4A !important;
+  }
+
+
+
+
+.menuBtn:hover{
+  background-color: #FFBC38 !important;
+  color: #fff !important;
+  cursor: pointer;
+
+  }
