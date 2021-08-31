@@ -6,7 +6,7 @@ import Content from './content';
 
 const Container = ()=>{
 return (
-     <div className="local-container">
+     <div className="App-container">
           <Sidemenu/>
           <Content/>
      </div>
