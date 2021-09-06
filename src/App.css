@@ -102,7 +102,7 @@ body {
 
 .page-content{
   margin: 0px auto;
-  background-color: #FFBC38;
+  background-color:#fff ;/*#FFBC38*/
   height:100%;
   display: flex;
   flex-direction: column;
@@ -110,13 +110,14 @@ body {
 }
 
 .search-form{
-  background-color: #7f7f7f;
+  background-color: #fff;
   margin-block: 10px;
   height: auto;
 }
 
+
 .search-results{
-  background-color:#7f3;
+  background-color:#fff;/*#7f3*/;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -139,6 +140,7 @@ body {
 .mobile-menu a{
   display: none;
 }
+
 
 
 .menu{
@@ -173,6 +175,8 @@ body {
     background-color: #FFBC38 !important;
     box-shadow: 0px 2px 7px 1px rgba(65, 65, 65, 0.171);
   }
+
+  
 
   .navi{
     margin-right: 2.7vw !important;
@@ -317,6 +321,63 @@ transition: .4s ease-in;
   color: #142A4A !important;
   }
 
+  .nav-tabs {
+    border-bottom: 1px solid #0000001a;
+    justify-content: space-around;
+   color: #142A4A;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: transparent;
+  isolation: isolate;
+}
+
+.nav-link:focus, .nav-link:hover,.nav-link {
+  color: #142A4A;
+  padding-block-end: 0px;
+  font-size:small;
+  font-weight: 600;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #142A4A;
+  background-color: #fff;
+  border-bottom: 4px solid;
+  border-color: #fff #fff #FFBC38;
+  box-shadow: 0 5px 4px -3px rgba(56, 56, 56, 0.342);
+}
+
+  label{
+    font-size: small;
+    font-weight: 700 !important;
+  }
+
+
+  .form-control {
+    background-color: #F1F1F3 !important;
+    border: 1px solid #F1F1F3 !important;
+    border-radius: .7rem;
+    font-weight: 500;
+    color: #142a4a !important;
+    padding: 9px;
+    
+}
+input:focus, input.form-control:focus {
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+
+input[type = "button"]{
+  background-color: #FFBC38 !important;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.Htext{
+  color: #fff;
+}
 @media (max-width: 720px) {
   .side-menu{
     display: none;
@@ -349,6 +410,11 @@ transition: .4s ease-in;
   .page{
     padding: 0px 10px 0px 10px;
  
+  }
+
+  .Htext{
+ 
+    display: none;
   }
 
 }
