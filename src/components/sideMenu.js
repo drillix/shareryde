@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg'
+import {Link,useLocation} from 'react-router-dom';
 
 
 const Logo =()=>{
@@ -9,15 +10,20 @@ const Logo =()=>{
 }
 
 const Menu = ()=>{
+    const location = useLocation();
+    const { pathname } = location;
+    const splitLocation = pathname.split("/");
+
      return (
-        <div>
+        
           <ul className="menu">
-             <a href="#"><li className="activated"><i className="material-icons">flip</i> Search</li></a>
-             <a href="#"><li><i className="material-icons-outlined">person</i> Accounts</li></a>
-             <a href="#"><li><i className="material-icons-outlined">forum</i> Community</li></a>
-             <a href="#"><li className="menuBtn"><i className="material-icons">album</i> Offer Ride</li></a>     
+             <Link to='/' ><li  className={splitLocation[1] === "" ? "activated" : "inactive"}><i className="material-icons">flip</i> Search</li></Link>
+             <Link to='/pages/account'><li  className={splitLocation[2] === "account" ? "activated" : "inactive"}><i className="material-icons-outlined">person</i> Accounts</li></Link>
+             <Link to='/pages/community'><li  className={splitLocation[2] === "community" ? "activated" : "inactive"}><i className="material-icons-outlined">forum</i> Community</li></Link>
+             <Link to='/pages/offer'><li className="menuBtn"><i className="material-icons">album</i> Offer Ride</li></Link>     
           </ul>
-        </div>
+         
+        
           
      )
 }

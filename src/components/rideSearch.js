@@ -25,7 +25,7 @@ const PageContent = ()=>{
         </Button>
         <Collapse in={open}>
         <Row id="example-collapse-text" className="filterForm">
-           <Col lg ={5}>
+           <Col lg ={4}>
            <Form.Group  > 
             <label for="customRange1" class="form-label rangeLabel">Price Range</label>
             <input type="range"  className="form-range mb-2" id="customRange1" min="50" max="600"></input>
@@ -36,7 +36,7 @@ const PageContent = ()=>{
             </div> 
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="commercial"/>
-              <label className="form-check-label" for="commercial">Commercial Company</label>
+              <label className="form-check-label" for="commercial">Commercial </label>
             </div> 
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="pets"/>
@@ -51,7 +51,7 @@ const PageContent = ()=>{
           </Col>
             
             
-            <Col lg={7}>
+            <Col lg={8  }>
            
            
 
@@ -116,9 +116,10 @@ const PageContent = ()=>{
             </Col>
             
             <Col md>
+            
             <Form.Group className="mb-3" >    
             <label className="Htext">.</label>                     
-              <Form.Control  type="button" value="Search"/>                       
+              <Form.Control  type="button" value="🔍 Search"/>                       
             </Form.Group>
             </Col>
             
