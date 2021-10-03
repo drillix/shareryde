@@ -14,6 +14,17 @@ const PageContent = ()=>{
     const [open, setOpen] = useState(false);
   
     return (
+
+    /*
+      TODO
+      FILTER PARAMS
+      Time - timepicker
+      highway - switch
+      women - switch
+      pets - switch
+      commercial - switch
+      fee range - ranger slider
+    */
       <>
         <Button
           onClick={() => setOpen(!open)}
@@ -169,7 +180,7 @@ const PageContent = ()=>{
        defaultActiveKey="riders"
        transition={false}
        id="noanim-tab-example"
-       className="mb-2 mt-2"
+       className="mb-2 "
        >
          <Tab eventKey="riders" title="Drivers">
            <SearchRider/>

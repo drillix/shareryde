@@ -17,6 +17,7 @@ const Offer = ()=> {
     <div className="content">
       <Nav/>
       <PageTitle/>
+      <p className="text-danger text-center"> Offer ride page</p>
 
     </div>
    )
