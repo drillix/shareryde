@@ -349,9 +349,21 @@ transition: .4s ease-in;
 
   label{
     font-size: small;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
   }
 
+  .priceRange{
+    font-size: xx-small !important;
+    color: #6c757d;
+    font-weight: 500;
+    margin-top: -7px;
+
+  }
+
+  .priceRange span{
+    font-weight: 700 !important;
+    color: #142A4A !important;
+  }
 
   .form-control {
     background-color: #F1F1F3 !important;
@@ -420,66 +432,10 @@ border:0.119rem solid #ADB4BF;
 }
 
 .form-switch label{
-font-weight:bold !important;
+font-weight:400 !important;
 margin-left: 7px;
 font-size: small;
 color: #142A4A;
-}
-
-
-
-.form-range {
-  width: 75% !important;
-  height: 1rem;
-  display: block;
-  padding: 0;
-  background-color: transparent;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.rangeLabel{
-  font-weight:bold !important;
-  font-size: small;
-  color: #142A4A;
-  margin-bottom: 0px;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  height: 2px;
-  cursor: pointer;
-  background: #ADB4BF;
-  border-radius: 5px;
-}
-input[type=range]::-moz-range-track {
-  height: 2px;
-  cursor: pointer;
-  background: #ADB4BF;
-  border-radius: 5px;
-}
-
-input[type=range]::-webkit-slider-thumb:focus {
-  outline: none !important;
-}
-/* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 13px;
-  width: 13px;
-  border-radius: 20px;
-  background: #FFBC38;
-  cursor: pointer;
-  margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 4px #ADB4BF, 0px 0px 1px #0d0d0d3d; /* Add cool effects to your sliders! */
-}
-
-/* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 4px #ADB4BF, 0px 0px 1px #0d0d0d3d;
-  height: 13px;
-  width: 13px;
-  border-radius: 20px;
-  background:#FFBC38;
-  cursor: pointer;
 }
 
 
@@ -525,6 +481,22 @@ input[type=range]::-moz-range-thumb {
     display: none;
   }
 
+}
+
+label.form-label{
+color: #142A4A !important;
+}
+
+
+.range-slider__wrap .range-slider__tooltip.range-slider__tooltip--top .range-slider__tooltip__caret::before {
+
+  border-top-color: #142a4a !important;
+}
+
+.range-slider__wrap .range-slider__tooltip .range-slider__tooltip__label {
+  
+  background-color: #142a4a!important;
+ 
 }
 
 
