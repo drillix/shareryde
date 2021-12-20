@@ -10,6 +10,7 @@ import {
   Collapse,
 } from "react-bootstrap";
 import RangeSlider from "react-bootstrap-range-slider";
+import driverPic from '../driver.png';
 
 const PageContent = () => {
   return (
@@ -25,16 +26,7 @@ function FilterSearch() {
   const [ finalValue, setFinalValue ] = useState(null);
 
   return (
-    /*
-      TODO
-      FILTER PARAMS
-      Time - timepicker
-      highway - switch
-      women - switch
-      pets - switch
-      commercial - switch
-      fee range - ranger slider
-    */
+    
     <>
       <Button
         onClick={() => setOpen(!open)}
@@ -82,7 +74,7 @@ function FilterSearch() {
                 type="checkbox"
                 id="highway"
               />
-              <label className="form-check-label" for="highway">
+              <label className="form-check-label" htmlFor="highway">
                 Use Highway
               </label>
             </div>
@@ -92,19 +84,19 @@ function FilterSearch() {
                 type="checkbox"
                 id="commercial"
               />
-              <label className="form-check-label" for="commercial">
+              <label className="form-check-label" htmlFor="commercial">
                 Commercial{" "}
               </label>
             </div>
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="pets" />
-              <label className="form-check-label" for="pets">
+              <label className="form-check-label" htmlFor="pets">
                 Pets Allowed
               </label>
             </div>
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="women" />
-              <label className="form-check-label" for="women">
+              <label className="form-check-label" htmlFor="women">
                 Women Only
               </label>
             </div>
@@ -157,14 +149,44 @@ const SearchForm = () => {
   );
 };
 
+const Ride = () =>{
+  return(
+    <div className="rideItem">
+      <img src={driverPic} alt="img" />
+      <div className="details">
+    
+        <p className="Dname">Foster Asafo</p>
+        <p className="Tlocation">Kumasi  - Tamale </p>
+        <p className="Tduration">16 : 00 pm - 3 : 00 am</p>
+  
+      </div>
+      <div className="details2">
+      <div className="price">100<sup className="sup">GHS</sup></div>
+      <div className="seat">5 Seats</div>
+      </div>
+     
+      <div className="specs"><span><i className="material-icons-outlined">pets</i><i className="material-icons-outlined">wifi</i><i className="material-icons-outlined">luggage</i></span></div> 
+    </div>
+  )
+}
 const RidesFeeds = () => {
   return (
-    <Col lg={7}>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero facere
-      minima impedit exercitationem sed veniam cupiditate. Quae, atque et.
-      Minus, in commodi. Maxime, itaque. Nulla repellat impedit quia? Eaque illo
-      quibusdam, nihil pariatur dolorum vel officiis magni ipsa tenetur, id amet
-      modi impedit suscipit at est corporis temporibus! Laudantium, sed.
+    <Col lg={7} >
+    <div className="rideHeaders">
+     <div className="date"><i className="material-icons-outlined">calendar_today</i>  Tuesday, 14 December 2021. </div>
+     <div className="location">Top Locations</div>
+    </div>
+    <div className="rideContainer">
+    <Ride/>
+    <Ride/>
+   
+  
+    
+
+    </div>
+    
+    
+      
     </Col>
   );
 };
@@ -172,9 +194,7 @@ const RidesFeeds = () => {
 const FeedView = () => {
   return (
     <Col className="feedView" lg={5}>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error autem
-      placeat pariatur, labore ad at accusantium ea vel facilis aperiam laborum
-      mollitia tempore et impedit voluptatem deserunt inventore quos optio.
+
     </Col>
   );
 };

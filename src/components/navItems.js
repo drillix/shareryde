@@ -76,7 +76,7 @@ let username = user.firstname +' '+ user.lastname;
     <div >
       <Dropdown className="Dropdown">
       <Notifbtns/>
-      <img alt="avatasr" className="rounded-circle profile-pic" src={profile}/>
+      <img alt="avatar" className="rounded-circle profile-pic" src={profile}/>
         <Dropdown.Toggle className="usertxt" variant="white">
           <span className="welcome">   Hi, {username}</span>
         </Dropdown.Toggle>
