@@ -415,7 +415,11 @@ input[type = "button"]{
 }
 
 .filterForm{
-  margin-block: 15px;
+  margin-block: 7px;
+  padding-block: 5px;
+  border-radius: 6px;
+  background-color: #ecf2f7;
+  border: .059rem dashed #142a4a;
 }
 .form-switch{
   display: flex;

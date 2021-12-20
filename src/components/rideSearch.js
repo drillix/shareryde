@@ -38,14 +38,14 @@ function FilterSearch() {
       </Button>
       <Collapse in={open}>
         <Row id="example-collapse-text" className="filterForm">
-          <Col lg={6}>
+          <Col lg={4}>
             <Form.Group as={Row}>
               <Col xs="4">
                 <Form.Label>
                   Price Range
                 </Form.Label>
               </Col>
-              <Col xs="7">
+              <Col xs="8">
                 <RangeSlider
                   value={value}
                   onChange={(e) => setValue(e.target.value)}
@@ -61,13 +61,15 @@ function FilterSearch() {
                 />
                 <p className="priceRange">Selected price limit per head: <span>GHS {finalValue}</span></p>
               </Col>
+              
             </Form.Group>
             
           </Col>
 
-          <Col lg={6} className="px-lg-5">
+          <Col lg={8} className="px-lg-5" >
             <Row>
-              <Form.Group>
+            <Col lg={6} >
+            <Form.Group>
               <div className="form-check form-switch">
               <input
                 className="form-check-input"
@@ -88,6 +90,12 @@ function FilterSearch() {
                 Commercial{" "}
               </label>
             </div>
+            
+              </Form.Group>
+            </Col>
+            <Col lg={6} >
+            <Form.Group>
+              
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="pets" />
               <label className="form-check-label" htmlFor="pets">
@@ -97,10 +105,12 @@ function FilterSearch() {
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="women" />
               <label className="form-check-label" htmlFor="women">
-                Women Only
+                Bus stops
               </label>
             </div>
               </Form.Group>
+            </Col>
+              
             </Row>
           </Col>
         </Row>
