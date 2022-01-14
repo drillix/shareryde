@@ -10,7 +10,7 @@ import {
   Collapse,
 } from "react-bootstrap";
 import RangeSlider from "react-bootstrap-range-slider";
-import driverPic from '../driver.png';
+//import driverPic from '../driver.png';
 
 const PageContent = () => {
   return (
@@ -160,23 +160,103 @@ const SearchForm = () => {
 };
 
 const Ride = () =>{
+
+let Rides = [
+  {
+    img: "driverPic",
+    name: "Foster Asafo",
+    location: {
+      from: "Kumasi",
+      to: "Tamale",
+    },
+    duration: {
+      departure: "16:00am",
+      arrival: "3:00pm",
+    },
+    details: {
+      price: 120,
+      seatsAvailable: 5,
+    },
+    addons: ['wifi','horizontal_distribute','luggage'],
+  },
+  {
+    img: "driverPic",
+    name: "Kojo Oppong",
+    location: {
+      from: "Accra",
+      to: "Takoradi",
+    },
+    duration: {
+      departure: "6:00am",
+      arrival: "12:00pm",
+    },
+    details: {
+      price: 80,
+      seatsAvailable: 12,
+    },
+    addons: ['luggage','smoke_free','luggage','horizontal_distributed'],
+  },
+  {
+    img: "driverPic",
+    name: "Jeff Bezoz",
+    location: {
+      from: "Koforidua",
+      to: "Accra",
+    },
+    duration: {
+      departure: "3:00pm",
+      arrival: "7:00pm",
+    },
+    details: {
+      price: 25,
+      seatsAvailable: 10,
+    },
+    addons: ['pets','smoke_free','ac_unit'],
+  },
+  {
+    img: "driverPic",
+    name: "Brefo Gyamera",
+    location: {
+      from: "Nsawam",
+      to: "Accra",
+    },
+    duration: {
+      departure: "11:00am",
+      arrival: "2:00pm",
+    },
+    details: {
+      price: 10,
+      seatsAvailable: 15,
+    },
+    addons: ['stop_circle','usb','female','smoke_free'],
+  },
+];
+
   return(
+    <>
+   {Rides.map(ride=>(
     <div className="rideItem">
-      <img src={driverPic} alt="img" />
+      <img src={ride.img} alt="img" />
       <div className="details">
     
-        <p className="Dname">Foster Asafo</p>
-        <p className="Tlocation">Kumasi  - Tamale </p>
-        <p className="Tduration">16 : 00 pm - 3 : 00 am</p>
+        <p className="Dname">{ride.name}</p>
+        <p className="Tlocation">{ride.location?.from} - {ride.location?.to} </p>
+        <p className="Tduration">{ride.duration?.departure} - {ride.duration?.arrival}</p>
   
       </div>
       <div className="details2">
-      <div className="price">100<sup className="sup">GHS</sup></div>
-      <div className="seat">5 Seats</div>
+      <div className="price">{ride.details?.price}<sup className="sup">GHS</sup></div>
+      <div className="seat">{ride.details?.seatsAvailable} Seats</div>
       </div>
      
-      <div className="specs"><span><i className="material-icons-outlined">pets</i><i className="material-icons-outlined">wifi</i><i className="material-icons-outlined">luggage</i></span></div> 
+      <div className="specs">
+        <span>{ride.addons.map(addon=>(<i className="material-icons-outlined">{addon}</i>))}</span>
+      </div> 
     </div>
+   ))}
+      
+    </>
+   
   )
 }
 const RidesFeeds = () => {
@@ -188,7 +268,7 @@ const RidesFeeds = () => {
     </div>
     <div className="rideContainer">
     <Ride/>
-    <Ride/>
+    
    
   
     
