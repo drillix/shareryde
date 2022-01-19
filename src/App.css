@@ -15,7 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 
 }
 
@@ -641,7 +641,7 @@ border-radius: 7px;
   padding-left: 10px;
 }
 
-.rideItem > .details2{
+.rideItem > .secondDetails{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -654,7 +654,7 @@ border-radius: 7px;
   line-height: 1rem;
 }
 
-.details2 div{
+.secondDetails div{
   margin-bottom: 0px;
   line-height: .746rem;
 
@@ -714,6 +714,7 @@ border-radius: 7px;
         line-height:initial;
         width: 92px;
         height: 23px;
+        color: #142A4A;
         
       }
 

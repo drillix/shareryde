@@ -105,7 +105,7 @@ function FilterSearch() {
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" id="women" />
               <label className="form-check-label" htmlFor="women">
-                Bus stops
+                Bus Stops
               </label>
             </div>
               </Form.Group>
@@ -159,10 +159,39 @@ const SearchForm = () => {
   );
 };
 
+
+
+const RideItem =(props)=>{
+  return(
+    <div className="rideItem" id = {props.id}>
+      <img src={props.img} alt="img" />
+
+      <div className="details">
+        <p className="Dname">{props.name}</p>
+        <p className="Tlocation">{props.location?.from} - {props.location?.to} </p>
+        <p className="Tduration">{props.duration?.departure} - {props.duration?.arrival}</p>
+      </div>
+
+      <div className="secondDetails">
+      <div className="price">{props.details?.price}<sup className="sup">GHS</sup></div>
+      <div className="seat">{props.details?.seatsAvailable} Seats</div>
+      </div>
+     
+      <div className="specs">
+        <span>{props.addons.map(addon=>(<i className="material-icons-outlined">{addon}</i>))}</span>
+      </div> 
+
+    </div>
+  )
+
+}
+
+
+
 const Ride = () =>{
 
-let Rides = [
-  {
+const Rides = [
+  {id:1,
     img: "driverPic",
     name: "Foster Asafo",
     location: {
@@ -179,7 +208,7 @@ let Rides = [
     },
     addons: ['wifi','horizontal_distribute','luggage'],
   },
-  {
+  {id:2,
     img: "driverPic",
     name: "Kojo Oppong",
     location: {
@@ -194,9 +223,9 @@ let Rides = [
       price: 80,
       seatsAvailable: 12,
     },
-    addons: ['luggage','smoke_free','luggage','horizontal_distributed'],
+    addons: ['luggage','smoke_free','usb','horizontal_distributed'],
   },
-  {
+  {id:3,
     img: "driverPic",
     name: "Jeff Bezoz",
     location: {
@@ -213,7 +242,7 @@ let Rides = [
     },
     addons: ['pets','smoke_free','ac_unit'],
   },
-  {
+  {id:4,
     img: "driverPic",
     name: "Brefo Gyamera",
     location: {
@@ -228,66 +257,63 @@ let Rides = [
       price: 10,
       seatsAvailable: 15,
     },
-    addons: ['stop_circle','usb','female','smoke_free'],
+    addons: ['stop_circle','usb','smoke_free'],
   },
 ];
 
   return(
     <>
    {Rides.map(ride=>(
-    <div className="rideItem">
-      <img src={ride.img} alt="img" />
-      <div className="details">
-    
-        <p className="Dname">{ride.name}</p>
-        <p className="Tlocation">{ride.location?.from} - {ride.location?.to} </p>
-        <p className="Tduration">{ride.duration?.departure} - {ride.duration?.arrival}</p>
-  
-      </div>
-      <div className="details2">
-      <div className="price">{ride.details?.price}<sup className="sup">GHS</sup></div>
-      <div className="seat">{ride.details?.seatsAvailable} Seats</div>
-      </div>
-     
-      <div className="specs">
-        <span>{ride.addons.map(addon=>(<i className="material-icons-outlined">{addon}</i>))}</span>
-      </div> 
-    </div>
+
+    <RideItem 
+    id ={ride.id} 
+    img={ride.img} 
+    name={ride.name} 
+    location={ride.location} 
+    duration={ride.duration}
+    details={ride.details}
+    addons={ride.addons} 
+     />
+
    ))}
       
     </>
    
   )
 }
+
+
+
 const RidesFeeds = () => {
   return (
     <Col lg={7} >
     <div className="rideHeaders">
-     <div className="date"><i className="material-icons-outlined">calendar_today</i>  Tuesday, 14 December 2021. </div>
+     <div className="date"><i className="material-icons-outlined">calendar_today</i>  Friday, 14 January 2022. </div>
      <div className="location">Top Locations</div>
     </div>
-    <div className="rideContainer">
-    <Ride/>
-    
-   
-  
-    
 
+    <div className="rideContainer">
+      <Ride/>
     </div>
-    
-    
       
     </Col>
   );
 };
 
 const FeedView = () => {
+
+
   return (
     <Col className="feedView" lg={5}>
+        
 
     </Col>
   );
 };
+
+
+
+
 const SearchRider = () => {
   return (
     <Container className="page-content">
