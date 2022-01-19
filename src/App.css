@@ -715,6 +715,8 @@ border-radius: 7px;
         width: 92px;
         height: 23px;
         color: #142A4A;
+       overflow-x: auto;
+       overflow-y: hidden;
         
       }
 

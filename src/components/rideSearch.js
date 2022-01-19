@@ -10,7 +10,6 @@ import {
   Collapse,
 } from "react-bootstrap";
 import RangeSlider from "react-bootstrap-range-slider";
-//import driverPic from '../driver.png';
 
 const PageContent = () => {
   return (
@@ -191,8 +190,9 @@ const RideItem =(props)=>{
 const Ride = () =>{
 
 const Rides = [
-  {id:1,
-    img: "driverPic",
+  {
+    id: 1,
+    img: "https://picsum.photos/60/60",
     name: "Foster Asafo",
     location: {
       from: "Kumasi",
@@ -206,10 +206,11 @@ const Rides = [
       price: 120,
       seatsAvailable: 5,
     },
-    addons: ['wifi','horizontal_distribute','luggage'],
+    addons: ["wifi", "horizontal_distribute", "luggage"],
   },
-  {id:2,
-    img: "driverPic",
+  {
+    id: 2,
+    img: "https://picsum.photos/60/60",
     name: "Kojo Oppong",
     location: {
       from: "Accra",
@@ -223,10 +224,11 @@ const Rides = [
       price: 80,
       seatsAvailable: 12,
     },
-    addons: ['luggage','smoke_free','usb','horizontal_distributed'],
+    addons: ["luggage", "smoke_free", "usb", "horizontal_distributed"],
   },
-  {id:3,
-    img: "driverPic",
+  {
+    id: 3,
+    img: "https://picsum.photos/60/60",
     name: "Jeff Bezoz",
     location: {
       from: "Koforidua",
@@ -240,10 +242,11 @@ const Rides = [
       price: 25,
       seatsAvailable: 10,
     },
-    addons: ['pets','smoke_free','ac_unit'],
+    addons: ["pets", "smoke_free", "ac_unit"],
   },
-  {id:4,
-    img: "driverPic",
+  {
+    id: 4,
+    img: "https://picsum.photos/60/60",
     name: "Brefo Gyamera",
     location: {
       from: "Nsawam",
@@ -257,8 +260,8 @@ const Rides = [
       price: 10,
       seatsAvailable: 15,
     },
-    addons: ['stop_circle','usb','smoke_free'],
-  },
+    addons: ["stop_circle", "usb", "smoke_free"],
+  }
 ];
 
   return(
