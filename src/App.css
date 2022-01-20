@@ -777,3 +777,7 @@ border-radius: 7px;
 
 }
 
+.active > .rideItem {
+  background: #eee;
+}
+
