@@ -10,6 +10,7 @@ import {
   Collapse,
 } from "react-bootstrap";
 import RangeSlider from "react-bootstrap-range-slider";
+import Rides from "../API/ryde-api"
 
 const PageContent = () => {
   return (
@@ -161,8 +162,17 @@ const SearchForm = () => {
 
 
 const RideItem =(props)=>{
+  
+   
+ 
+  
   return(
-    <div className="rideItem" id = {props.id}>
+    <div className="rideItem" id = {props.id} onClick={
+      (e) => {
+        e.preventDefault();
+
+        alert('clicked ride '+props.id);
+    }}>
       <img src={props.img} alt="img" />
 
       <div className="details">
@@ -177,7 +187,7 @@ const RideItem =(props)=>{
       </div>
      
       <div className="specs">
-        <span>{props.addons.map(addon=>(<i className="material-icons-outlined">{addon}</i>))}</span>
+        <span>{props.addons.map(addon=>(<i className="material-icons-outlined" title={addon}>{addon}</i>))}</span>
       </div> 
 
     </div>
@@ -185,84 +195,9 @@ const RideItem =(props)=>{
 
 }
 
-
-
 const Ride = () =>{
 
-const Rides = [
-  {
-    id: 1,
-    img: "https://picsum.photos/60/60",
-    name: "Foster Asafo",
-    location: {
-      from: "Kumasi",
-      to: "Tamale",
-    },
-    duration: {
-      departure: "16:00am",
-      arrival: "3:00pm",
-    },
-    details: {
-      price: 120,
-      seatsAvailable: 5,
-    },
-    addons: ["wifi", "horizontal_distribute", "luggage"],
-  },
-  {
-    id: 2,
-    img: "https://picsum.photos/60/60",
-    name: "Kojo Oppong",
-    location: {
-      from: "Accra",
-      to: "Takoradi",
-    },
-    duration: {
-      departure: "6:00am",
-      arrival: "12:00pm",
-    },
-    details: {
-      price: 80,
-      seatsAvailable: 12,
-    },
-    addons: ["luggage", "smoke_free", "usb", "horizontal_distributed"],
-  },
-  {
-    id: 3,
-    img: "https://picsum.photos/60/60",
-    name: "Jeff Bezoz",
-    location: {
-      from: "Koforidua",
-      to: "Accra",
-    },
-    duration: {
-      departure: "3:00pm",
-      arrival: "7:00pm",
-    },
-    details: {
-      price: 25,
-      seatsAvailable: 10,
-    },
-    addons: ["pets", "smoke_free", "ac_unit"],
-  },
-  {
-    id: 4,
-    img: "https://picsum.photos/60/60",
-    name: "Brefo Gyamera",
-    location: {
-      from: "Nsawam",
-      to: "Accra",
-    },
-    duration: {
-      departure: "11:00am",
-      arrival: "2:00pm",
-    },
-    details: {
-      price: 10,
-      seatsAvailable: 15,
-    },
-    addons: ["stop_circle", "usb", "smoke_free"],
-  }
-];
+ 
 
   return(
     <>
@@ -276,7 +211,8 @@ const Rides = [
     duration={ride.duration}
     details={ride.details}
     addons={ride.addons} 
-     />
+   
+     /> 
 
    ))}
       
@@ -284,8 +220,6 @@ const Rides = [
    
   )
 }
-
-
 
 const RidesFeeds = () => {
   return (
@@ -308,7 +242,8 @@ const FeedView = () => {
 
   return (
     <Col className="feedView" lg={5}>
-        
+   
+
 
     </Col>
   );

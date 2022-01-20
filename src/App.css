@@ -388,14 +388,13 @@ input:focus, input.form-control:focus,.form-check-input:focus {
   align-items: center;
   font-size: small;
   padding: 3px 4px;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   color: #FFBC38 !important;
   justify-content: center;
   margin-left: 10px;
   margin-top: -7px;
   background-color: #FFF !important;
-  border: #FFF !important;
-  border-radius: 0.5rem !important;
+  border: none !important;
 }
 .filterbtn i{
   font-size:large;
@@ -625,6 +624,7 @@ width: 60px;
 height: 60px;
 background-color: #fff;
 color: #fff;
+border: 2px solid #fff;
 border-radius: 7px;
 }
 
@@ -715,7 +715,7 @@ border-radius: 7px;
         width: 92px;
         height: 23px;
         color: #142A4A;
-       overflow-x: auto;
+       overflow-x: hidden;
        overflow-y: hidden;
         
       }
