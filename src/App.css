@@ -738,6 +738,11 @@ border-radius: 7px;
   text-decoration:underline double #FFBC38;
 }
 
+.active > .rideItem {
+  background: rgba(238, 238, 238, 0.701);
+}
+
+
 @media only screen and (max-width: 767px) {
   .notfound .notfound-404 h1 {
     font-size: 148px;
@@ -777,7 +782,4 @@ border-radius: 7px;
 
 }
 
-.active > .rideItem {
-  background: #eee;
-}
 
