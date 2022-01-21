@@ -236,9 +236,68 @@ const RidesFeeds = () => {
 function FeedContent() {
   const {rideId} = useParams()
 
-  return (
+  
+   let ride = Rides.filter((singleRide)=>singleRide.id === Number(rideId));
+ 
+    
 
-    <p>{rideId}</p>
+
+  return (
+    <div>
+      <div>
+ 
+      {ride.map(rideView=>(
+        <>
+        
+        <Row className="rideViewTop">
+        <div>
+        <img src={rideView.img} alt="" />
+        <p className="mainDetail">{rideView.name}</p>
+        <p className="subDetail">{rideView.location?.from} - {rideView.location?.to}</p>
+        <p className="subDetail">{rideView.duration?.departure} - {rideView.duration?.arrival}</p>
+        <p className="subDetail">{rideView.details?.seatsAvailable} seats <span className="avble">Available</span></p>
+        </div>
+       
+       
+        </Row>
+        <Row>
+        <p className="detailHead">Info.</p>
+        <Col md>
+        <div feedViewBottom>
+   
+        <ul className="detailList">
+          <li>Vehicle: <span className="detailDat">{rideView.info?.vehicle}</span></li>
+          <li>Model: <span className="detailData">{rideView.info?.model}</span></li>
+          <li>Color: <span className="detailData">{rideView.info?.color}</span></li>
+          <li>Capacity: <span className="detailData">{rideView.info?.capacity} seats</span></li>
+          <li>Reg No.: <span className="detailDat">{rideView.info?.regNo}</span></li>
+          </ul>
+        </div>
+        
+        </Col>
+
+        <Col md>
+        <div feedViewBottom>
+        <ul className="detailList">
+          <li>Rating: <span className="detailData">{rideView.rating} ☆</span></li>  
+          <li>About trip: {rideView.addons.map(addon => (<i className="material-icons-outlined">{addon}</i>))}</li>
+        </ul>
+        <Button className="bookDriver">Book Driver</Button>
+        </div>
+        </Col>
+      </Row>
+        
+        
+       
+       
+
+        </>
+        ))}
+      </div>
+      
+
+    </div>
+   
   )
 }
 
@@ -246,7 +305,7 @@ const FeedView = () => {
   return (
     <Col className="feedView" lg={5}>
       <Route path='/:rideId'>
-        <FeedContent/>
+        <FeedContent />
       </Route>
     </Col>
   );

@@ -1,0 +1,25 @@
+<Row className="rideViewTop">
+        <div>
+        <img src={rideView.img} alt="" />
+        <p>{rideView.name}</p>
+        <p>{rideView.location?.from} - {rideView.location?.to}<br/>
+        {rideView.duration?.departure} - {rideView.duration?.arrival}<br/>
+        {rideView.details?.seatsAvailable} Seats <br/>
+        GHS {rideView.details?.price}</p>
+        </div>
+       
+        </Row>
+        <Row>
+        <Col md>
+        <div className="specs">
+          <span>{rideView.addons.map(addon => (<i className="material-icons-outlined">{addon}</i>))}</span>
+        </div>
+        </Col>
+
+        <Col md>
+          
+        </Col>
+      </Row>
+        
+        
+       

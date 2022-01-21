@@ -715,7 +715,7 @@ border-radius: 7px;
         width: 92px;
         height: 23px;
         color: #142A4A;
-       overflow-x: auto;
+       overflow-x: hidden;
        overflow-y: hidden;
         
       }
@@ -730,8 +730,91 @@ border-radius: 7px;
   border: 1px solid #EAEAEA;
   border-radius: 12px;
   height: 320px;
+  overflow-y: scroll;
+  color: #142A4A;
+  box-sizing: border-box;
+  padding-inline:15px;
+  padding-block-start: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rideViewTop > div{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ text-align: center;
+ margin-bottom: 15px;
+}
+
+.rideViewTop img{
+  margin-bottom: 6px;
+  height: 60px;
+  border-radius: 7px 7px;
+  
 
 }
+
+
+.rideViewTop .mainDetail{
+  margin-block:-2px ;
+  font-size:medium;
+  font-weight: 500;
+}
+.rideViewTop .subDetail{
+  margin-block:-3px ;
+  font-size: small;
+  font-weight: 400;
+}
+
+.avble{
+  color: #28BC22;
+  font-weight: 400 !important;
+}
+
+.detailHead{
+  text-decoration: underline;
+  font-size: small;
+  margin-bottom: 0px;
+}
+
+.bookDriver{
+  color: white !important;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: medium;
+  padding-block: 7px;
+  border-radius: 0.7em;
+  background-color: #38B2FF !important;
+  box-shadow: 0px 2px 9px 1px rgba(65, 65, 65, 0.171);
+  border: #38B2FF;
+}
+
+.detailList{
+  list-style: none;
+  font-size:small;
+  padding: 0px;
+  font-weight: 500;
+  color: #B8BFC8;
+}
+
+.detailList i{
+  font-size:small;
+  color: #142A4A !important;
+}
+
+.detailData{
+  color: #142A4A !important;
+  font-weight: 400;
+}
+.detailDat{
+  color: #142A4A !important;
+  font-weight: 600;
+}
+
+
+
+
 
 .notfound a:hover {
   color: #142A4A;
